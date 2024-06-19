@@ -1,0 +1,30 @@
+main {
+    max-width: 1240px;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    p {
+        color: #FF6060;
+        font-size: 36px;
+        font-weight: 500;
+    }
+    .errorCode {
+        font-size: 288px;
+        margin: 0;
+    }
+    a {
+        font-size: 16px;
+        color: black;
+    }
+}
+
+// Media queries
+@media (min-width: 768px) and (max-width: 1023px) {
+    /* Add responsive styles here */
+}
+
+@media (min-width: 1024px) {
+    /* Add responsive styles here */
+}

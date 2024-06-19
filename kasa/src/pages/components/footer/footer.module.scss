@@ -1,0 +1,21 @@
+// Mobile styles
+footer{
+    width: 100%;
+    height: 210px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    margin: auto;
+    background-color: black;
+    color: white;
+    font-size: 24px;
+    position: fixed;
+    bottom: 0;
+    
+    img{
+        margin-top: 50px;
+        height: 40px;
+        width: 125px;
+    }
+}
