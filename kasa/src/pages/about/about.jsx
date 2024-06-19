@@ -5,10 +5,10 @@ import Footer from '../components/footer/footer';
 
 const Apropos = () => {
     return (
-        <body>
+        <div>
             <Header />
             <Footer />
-        </body>
+        </div>
     );
 };
 

@@ -8,7 +8,7 @@ const Error404 = () => {
     return (
         <div>
             <Header />
-            <main className={styles.main}>
+            <main className={styles.error}>
                 <p className={styles.errorCode}>404</p>
                 <p>Oups! La page que vous demandez n'existe pas.</p>
                 <Link to='/'>

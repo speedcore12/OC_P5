@@ -5,10 +5,10 @@ import Footer from '../components/footer/footer';
 
 const Housing = () => {
     return (
-        <body>
+        <div>
             <Header />
             <Footer />
-        </body>
+        </div>
     );
 };
 
