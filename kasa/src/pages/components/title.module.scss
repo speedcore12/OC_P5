@@ -1,5 +1,5 @@
 .title {
-    position: relative; // Assurez-vous que l'élément est positionné relativement pour que le pseudo-élément soit positionné correctement
+    position: relative; // L'élément est positionné relativement pour que le pseudo-élément soit positionné correctement
     width: 1240px;
     height: 223px;
     color: white;
@@ -12,7 +12,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    overflow: hidden; // Assurez-vous que le pseudo-élément ne dépasse pas
+    overflow: hidden; // Le pseudo-élément ne dépasse pas
 
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 
@@ -24,18 +24,20 @@
         left: 0;
         width: 100%;
         height: 100%;
-        background-image: url('./title_background.webp');
-        background-size: cover;
-        background-repeat: no-repeat;
-        background-position: center;
+        background: inherit; // Hérite de l'image de fond du parent
         filter: brightness(50%);
-        z-index: 1; // Assurez-vous que le pseudo-élément est en dessous du texte
+        z-index: 1; // Le pseudo-élément est en dessous du texte
     }
 
-    // Assurez-vous que le texte est au-dessus du pseudo-élément
+    // Le texte est au-dessus du pseudo-élément
     span {
         position: relative;
         z-index: 2;
-        text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+        text-shadow: 
+            -1px 0 black, 
+            0 1px black, 
+            1px 0 black, 
+            0 -1px black,
+            0px 4px 4px rgba(0, 0, 0, 0.25);
     }
 }
