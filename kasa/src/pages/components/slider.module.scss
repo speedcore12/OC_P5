@@ -1,0 +1,51 @@
+.slider {
+    width: 100%;
+
+    .sliderContainer {
+        position: relative; /* Assurez-vous que le conteneur est positionné relativement pour positionner correctement les enfants absolus */
+    }
+
+    .sliderImage {
+        height: 415px;
+        background-size: cover;
+        background-position: center;
+        border-radius: 20px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative; /* Position relative pour les enfants absolus */
+
+        .sliderButtons {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            right: 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transform: translateY(-50%); /* Centré verticalement */
+
+            p {
+                margin: 0;
+                padding: 20px;
+                font-size: 78px;
+                color: white;
+                font-weight: 700;
+                width: 95px;
+                height: 120px;
+                cursor: pointer;
+            }
+        }
+
+        .sliderCaption {
+            position: absolute;
+            font-size: 24px;
+            bottom: 10px; /* Positionné en bas de la div image */
+            left: 50%;
+            transform: translateX(-50%); /* Centré horizontalement */
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px; /* Optionnel pour le style */
+        }
+    }
+}
