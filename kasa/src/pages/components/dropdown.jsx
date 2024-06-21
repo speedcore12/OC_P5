@@ -20,9 +20,11 @@ const Dropdown = ({ data }) => {
     };
 
     return (
-        <div className={styles.dropdown}>
+        <div className={styles.dropdowns}>
             {data.map((item, index) => (
-                <div key={index}>
+                // Chaque élément du tableau `data` est rendu comme un dropdown individuel
+                <div className={styles.dropdown} key={index}>
+                    {/* Titre du dropdown, cliquable pour ouvrir/fermer le contenu */}
                     <div className={styles.title} onClick={() => toggleDropdown(index)}>
                         <p>{item.title}</p>
                         <p>
@@ -38,6 +40,7 @@ const Dropdown = ({ data }) => {
                     <div className={`${styles.content} ${openIndexes.includes(index) ? styles.open : ''}`}>
                         <ul>
                             {item.content.map((contentItem, contentIndex) => (
+                                // Chaque élément de contenu est rendu dans un élément de liste <li>
                                 <li key={contentIndex}>{contentItem}</li>
                             ))}
                         </ul>

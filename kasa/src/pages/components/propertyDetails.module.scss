@@ -74,7 +74,7 @@
                 font-size: 14px;
                 font-weight: 700;
                 padding: 0 5px ;
-                margin-right: 35px;
+                margin-right: 7px;
             }
         }
 
@@ -83,19 +83,18 @@
             margin-left: 15px;
 
         }    
-
     }
 
     .dropdowns {
         display: flex;
         justify-content: space-between;
-        align-items: center;
+        align-items: start;
+        width: 100%;
+
     
         // Applique 40% de largeur à chaque dropdown enfant
         > div {
-            width: 40%;
+            width: 45%;
         }
     }
-    
-    
 }
