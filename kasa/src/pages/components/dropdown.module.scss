@@ -3,8 +3,6 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin: auto;
-    gap: 30px;
     margin-top: 30px;
     margin-bottom: 30px;
     background-color: white;
@@ -22,6 +20,7 @@
     font-weight: 700;
     font-size: 24px;
     color: white;
+    width: 100%; // Assure que la largeur de la titre reste constante
 
     p {
         margin: 0;
@@ -32,7 +31,7 @@
     }
 
     .icon.rotate {
-        transform: rotate(180deg); // Applique une rotation de 180 degrés
+        transform: rotate(-180deg); // Applique une rotation de 180 degrés
     }
 }
 
@@ -45,6 +44,7 @@
     transition: max-height 0.3s ease, padding 0.3s ease; // Ajoute une transition pour l'animation
     padding: 0 15px; // Padding global de 15px sur les côtés
     visibility: hidden; // Rendre le contenu invisible par défaut
+    width: 100%; // Assure que la largeur du contenu reste constante
 
     &.open {
         max-height: 1000px; // Définir une hauteur maximale suffisante pour le contenu
@@ -57,9 +57,7 @@
         list-style: none; // Supprime les puces des éléments de la liste
         padding: 0; // Supprime tout padding par défaut de la liste
         margin: 0; // Supprime toute marge par défaut de la liste
-
-        li {
-            padding: 10px 0; // Espacement interne de chaque élément de liste
-        }
+        display: flex;
+        flex-direction: column; // Affiche les éléments de la liste en colonne
     }
 }

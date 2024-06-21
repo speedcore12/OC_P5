@@ -4,6 +4,7 @@ import Header from '../components/header';
 import Footer from '../components/footer';
 import { useLocation } from 'react-router-dom';
 import Slider from '../components/slider';
+import PropertyDetails from '../components/propertyDetails';
 
 const Housing = () => {
     const location = useLocation();
@@ -22,6 +23,7 @@ const Housing = () => {
             <Header />
             <main className={style.housing}>
                 <Slider pictures={logement.pictures} />
+                <PropertyDetails details={logement} />
 
 
 

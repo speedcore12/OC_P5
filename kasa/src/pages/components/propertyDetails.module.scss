@@ -1,0 +1,101 @@
+.propertyDetails{
+    width: 100%;
+
+    .topContent{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        margin: 15px 0 15px 0;
+
+        
+        .titre{
+            h1{
+                color: #FF6060;
+                font-size: 36px;
+                font-weight: 500;
+                margin: 0;
+            }
+
+            p{
+                margin: 0;
+                font-size: 18px;
+                font-weight: 500;
+            }
+        }
+
+        .host{
+            display: flex;
+            flex-direction: row;
+            justify-content: end;
+            align-items: center;
+
+            img{
+                width: 64px;
+                height: 64px;
+                border-radius: 50%;
+            }
+
+            p{
+                margin: 15px;
+                font-family: Montserrat;
+                font-size: 18px;
+                font-weight: 500;
+                text-align: right;
+                color: #FF6060;
+            }
+        }
+    }
+    .bottomContent{
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        ul{
+            display: flex;
+            flex-direction: row;
+            justify-content: start;
+            align-items: center;
+            margin: 15px 0 15px 0;
+            list-style: none;
+            padding: 0;
+    
+            li{
+                min-width: 115px;
+                height: 25px;
+                gap: 0px;
+                border-radius: 10px;
+                color: white;
+                background-color : #FF6060;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                font-size: 14px;
+                font-weight: 700;
+                padding: 0 5px ;
+                margin-right: 35px;
+            }
+        }
+
+        svg{
+            font-size: 24px;
+            margin-left: 15px;
+
+        }    
+
+    }
+
+    .dropdowns {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    
+        // Applique 40% de largeur à chaque dropdown enfant
+        > div {
+            width: 40%;
+        }
+    }
+    
+    
+}
