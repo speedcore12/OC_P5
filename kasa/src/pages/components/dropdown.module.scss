@@ -1,67 +1,95 @@
 .dropdowns {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: repeat(1, 100%);
     align-items: center;
     justify-content: center;
-    margin-top: 30px;
-    margin-bottom: 30px;
+    padding-top: 30px;
     background-color: white;
-    width: 100%; // Assure que la largeur du dropdown reste constante
-    .dropdown{
+    width: 80%;
+    margin: auto;
+    box-sizing: border-box; // Assure que le padding est inclus dans la largeur totale
+
+    .dropdown {
         width: 100%;
         margin-bottom: 30px;
+        box-sizing: border-box; // Assure que le padding et les bordures sont inclus dans la largeur totale
+
+        .title {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #FF6060;
+            padding: 10px 20px 10px 15px;
+            border-radius: 5px;
+            font-weight: 700;
+            font-size: 24px;
+            color: white;
+            width: 100%; 
+            box-sizing: border-box; // Assure que le padding est inclus dans la largeur totale
+
+            p {
+                margin: 0;
+            }
+
+            .icon {
+                transition: transform 0.3s ease-in-out; // Ajoute une transition pour l'animation de rotation
+            }
+
+            .icon.rotate {
+                transform: rotate(-180deg); // Applique une rotation de 180 degrés
+            }
+        }
+
+        .content {
+            border-bottom-left-radius: 5px;
+            border-bottom-right-radius: 5px;
+            background-color: #F6F6F6;
+            overflow: hidden; // Ajoute overflow hidden pour gérer l'animation de déploiement
+            max-height: 0; // Définir la hauteur maximale à 0 par défaut
+            transition: max-height 0.3s ease, padding 0.3s ease; // Ajoute une transition pour l'animation
+            padding: 0 15px; // Padding global de 15px sur les côtés
+            visibility: hidden; // Rendre le contenu invisible par défaut
+            width: 100%; // Assure que la largeur du contenu reste constante
+            box-sizing: border-box; // Assure que le padding est inclus dans la largeur totale
+
+            &.open {
+                max-height: 1000px; // Définir une hauteur maximale suffisante pour le contenu
+                padding-top: 10px; // Conserver le padding lorsque le contenu est ouvert
+                padding-bottom: 10px; // Conserver le padding lorsque le contenu est ouvert
+                visibility: visible; // Rendre le contenu visible lorsque ouvert
+            }
+
+            ul {
+                list-style: none; // Supprime les puces des éléments de la liste
+                padding: 0; // Supprime tout padding par défaut de la liste
+                margin: 0; // Supprime toute marge par défaut de la liste
+                display: flex;
+                flex-direction: column; // Affiche les éléments de la liste en colonne
+            }
+        }
     }
 }
 
-.title {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    background-color: #FF6060;
-    padding: 10px 20px 10px 15px;
-    border-radius: 5px;
-    font-weight: 700;
-    font-size: 24px;
-    color: white;
-    width: 100%; // Assure que la largeur de la titre reste constante
 
-    p {
-        margin: 0;
-    }
 
-    .icon {
-        transition: transform 0.3s; // Ajoute une transition pour l'animation de rotation
-    }
 
-    .icon.rotate {
-        transform: rotate(-180deg); // Applique une rotation de 180 degrés
-    }
-}
 
-.content {
-    border-bottom-left-radius: 5px;
-    border-bottom-right-radius: 5px;
-    background-color: #F6F6F6;
-    overflow: hidden; // Ajoute overflow hidden pour gérer l'animation de déploiement
-    max-height: 0; // Définir la hauteur maximale à 0 par défaut
-    transition: max-height 0.3s ease, padding 0.3s ease; // Ajoute une transition pour l'animation
-    padding: 0 15px; // Padding global de 15px sur les côtés
-    visibility: hidden; // Rendre le contenu invisible par défaut
-    width: 100%; // Assure que la largeur du contenu reste constante
 
-    &.open {
-        max-height: 1000px; // Définir une hauteur maximale suffisante pour le contenu
-        padding-top: 10px; // Conserver le padding lorsque le contenu est ouvert
-        padding-bottom: 10px; // Conserver le padding lorsque le contenu est ouvert
-        visibility: visible; // Rendre le contenu visible lorsque ouvert
-    }
+//
+@media (max-width: 765px) {
+    .dropdowns {
+        width: 100%;    
+        padding: 10px;   
 
-    ul {
-        list-style: none; // Supprime les puces des éléments de la liste
-        padding: 0; // Supprime tout padding par défaut de la liste
-        margin: 0; // Supprime toute marge par défaut de la liste
-        display: flex;
-        flex-direction: column; // Affiche les éléments de la liste en colonne
-    }
+        .dropdown {
+            width: 100%;
+            .title{
+                font-size: 13px;
+            }
+            .content{
+                font-size: 13px;
+            }
+        }
+    }    
 }

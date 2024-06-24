@@ -21,6 +21,8 @@ const PropertyDetails = ({ details }) => {
         return stars;
     };
 
+
+
     return (
         <div className={styles.propertyDetails}>
             <div className={styles.topContent}>

@@ -3,6 +3,7 @@
     import styles from './nav.module.scss';
 
     const MenuNav = ({ navItems = [] }) => {
+
     return (
         <nav>
             <ul>

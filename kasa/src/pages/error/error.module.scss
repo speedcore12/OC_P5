@@ -1,30 +1,57 @@
 main.error {
+    padding-top: 100px;
     max-width: 1240px;
     margin: auto;
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-rows: 20% 20% 20%; // Divise la grille en trois lignes, chacune prenant 30% de la hauteur de l'écran
+    align-items: center; // Centre verticalement le contenu de chaque cellule
+    justify-items: center; // Centre horizontalement le contenu de chaque cellule
+    height: 80vh; // Assure que le conteneur prend toute la hauteur de l'écran
+    gap : 50px;
+
     p {
         color: #FF6060;
         font-size: 36px;
         font-weight: 500;
+        padding-top: 50px;
     }
+    
     .errorCode {
         font-size: 288px;
-        margin: 0;
     }
+    
     a {
-        font-size: 16px;
-        color: black;
+        font-family: Montserrat;
+        font-size: 18px;
+        font-weight: 500;
+        line-height: 25.67px;        
     }
 }
 
-// Media queries
-@media (min-width: 768px) and (max-width: 1023px) {
-    /* Add responsive styles here */
-}
-
-@media (min-width: 1024px) {
-    /* Add responsive styles here */
+@media (max-width: 765px) {
+    main.error {
+        p {
+            font-family: Montserrat;
+            font-size: 18px;
+            font-weight: 500;
+            line-height: 25.67px;
+            text-align: center;
+            
+        }
+        .errorCode {
+            font-family: Montserrat;
+            font-size: 96px;
+            font-weight: 700;
+            line-height: 136.9px;
+            text-align: center;            
+        }
+        a {
+            font-family: Montserrat;
+            font-size: 14px;
+            font-weight: 500;
+            line-height: 19.96px;
+            text-align: left;
+            
+        }
+    }
 }

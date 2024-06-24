@@ -2,7 +2,6 @@ main.main {
     margin: auto;
     max-width: 1240px;
     .contener {
-        width: 80%;
         margin: auto;
         justify-content: center;
     }
@@ -10,10 +9,11 @@ main.main {
 
 
 // Media queries
-@media (min-width: 768px) and (max-width: 1023px) {
+@media (max-width: 765px) {
+    main.main {
 
-}
+        .contener {
 
-@media (min-width: 1024px) {
-
+        }
+    }
 }

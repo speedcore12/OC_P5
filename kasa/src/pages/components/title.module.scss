@@ -1,6 +1,7 @@
 .title {
     position: relative; // L'élément est positionné relativement pour que le pseudo-élément soit positionné correctement
-    width: 1240px;
+    max-width: 1240px;
+    width: calc(100% - 20px); // Assure un espace de 10px de chaque côté
     height: 223px;
     color: white;
     font-size: 48px;
@@ -13,8 +14,8 @@
     align-items: center;
     justify-content: center;
     overflow: hidden; // Le pseudo-élément ne dépasse pas
-
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    margin: 0 auto; // Centre la div horizontalement
 
     // Pseudo-élément pour l'arrière-plan avec le filtre
     &::before {
@@ -39,5 +40,27 @@
             1px 0 black, 
             0 -1px black,
             0px 4px 4px rgba(0, 0, 0, 0.25);
+    }
+}
+
+@media (max-width: 765px) {
+    .title {
+        justify-content: start;
+        padding: 20px; // Réduire le padding pour les petits écrans
+        height: 111px;
+        
+        font-size: 24px; // Réduire la taille de la police pour les petits écrans
+        font-weight: 700;
+        line-height: 24px;
+        text-align: left;
+        box-sizing: border-box; // Inclure le padding dans la largeur totale
+        margin: 0 10px; // Ajouter une marge pour s'assurer que la div ne touche pas les bords de l'écran
+
+        span {
+            font-size: 24px;
+            font-weight: 700;
+            line-height: 24px;
+            text-align: left;
+        }
     }
 }

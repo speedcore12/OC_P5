@@ -1,4 +1,6 @@
 // Mobile styles
+
+
 main.housing {
     max-width: 1240px;
     width: 100%;
@@ -13,10 +15,8 @@ main.housing {
 
 
 // Media queries
-@media (min-width: 768px) and (max-width: 1023px) {
-
-}
-
-@media (min-width: 1024px) {
-
+@media (max-width: 765px) {
+    main.housing{
+        padding: 20px;
+    }
 }

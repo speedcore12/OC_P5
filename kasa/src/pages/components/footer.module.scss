@@ -19,3 +19,16 @@ footer{
         width: 125px;
     }
 }
+
+// Media queries
+@media (max-width: 765px) {
+    footer{        
+        width: 100%;
+        font-size: 12px;
+        font-weight: 500;
+        img{
+            height: 40px;
+            width: 122px;
+        }    
+    }
+}

@@ -3,29 +3,53 @@ main.home{
     max-width: 1240px;
     margin: 0 auto;
 
-
-    
+    .gallery{
+        display: flex;
+        flex-wrap: wrap;
+        gap: 50px;
+        justify-content: center;
+        margin-top: 30px;
+        background-color: #F6F6F6;
+        border-radius: 25px;
+        padding: 50px;
+        margin-bottom: 30px;
+    }
 }
 
-.gallery{
-    display: flex;
-    flex-wrap: wrap;
-    gap: 50px;
-    justify-content: center;
-    margin-top: 30px;
-    background-color: #F6F6F6;
-    border-radius: 25px;
-    padding: 50px;
-    margin-bottom: 30px;
-}
 
 
 // Media queries
-@media (min-width: 768px) and (max-width: 1023px) {
+@media (max-width: 1240px) and (min-width: 850px) {
+    main.home {
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(3, 30%);
+            gap: 50px;
+            justify-content: center;
+        }
+    }
 
 }
 
-@media (min-width: 1024px) {
-    
+@media (max-width: 849px) and (min-width: 766px) {
+    main.home {
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(2, 45%);
+            gap: 50px;
+            justify-content: center;
+        }
+    }
+}
 
+@media (max-width: 765px) {
+    main.home {
+        .gallery {
+            flex-direction: column; // Dispose les cartes en colonne
+            gap: 20px; // Ajuste l'espace entre les cartes
+            padding: 20px; // Ajuste le padding pour les petits écrans
+            background-color: white;
+            margin-top: 0;
+        }
+    }
 }

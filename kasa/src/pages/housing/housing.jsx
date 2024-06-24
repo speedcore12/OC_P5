@@ -18,16 +18,14 @@ const Housing = () => {
         return <p>Erreur: logement non trouvé</p>;
     }
 
+
+
     return (
         <div>
             <Header />
             <main className={style.housing}>
                 <Slider pictures={logement.pictures} />
                 <PropertyDetails details={logement} />
-
-
-
-
             </main>
             <Footer />
         </div>
