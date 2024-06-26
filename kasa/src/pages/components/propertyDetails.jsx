@@ -25,18 +25,11 @@ const PropertyDetails = ({ details }) => {
 
     return (
         <div className={styles.propertyDetails}>
-            <div className={styles.topContent}>
                 <div className={styles.titre}>
                     <h1>{details.title}</h1>
                     <p>{details.location}</p>
                 </div>
 
-                <div className={styles.host}>
-                    <p>{details.host.name}</p>
-                    <img src={details.host.picture} alt={details.host.name} />
-                </div>
-            </div>  
-            <div className={styles.bottomContent}>
                 <ul className={styles.tags}>
                     {details.tags.map((tag, index) => (
                         <li key={index} className={styles.tag}>
@@ -44,10 +37,15 @@ const PropertyDetails = ({ details }) => {
                         </li>
                     ))}
                 </ul>
+
+                <div className={styles.host}>
+                    <p>{details.host.name}</p>
+                    <img src={details.host.picture} alt={details.host.name} />
+                </div>
+
                 <div className={styles.rating}>
                     {renderStars(details.rating)}
                 </div>
-            </div>
             
             <div className={styles.dropdowns}>
                 <Dropdown data={[{ title: "Description", content: [details.description] }]} />

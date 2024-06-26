@@ -5,14 +5,15 @@
     justify-content: center;
     padding-top: 30px;
     background-color: white;
-    width: 80%;
-    margin: auto;
+    width: 100%;
     box-sizing: border-box; // Assure que le padding est inclus dans la largeur totale
+
 
     .dropdown {
         width: 100%;
         margin-bottom: 30px;
         box-sizing: border-box; // Assure que le padding et les bordures sont inclus dans la largeur totale
+
 
         .title {
             display: flex;
@@ -27,6 +28,7 @@
             color: white;
             width: 100%; 
             box-sizing: border-box; // Assure que le padding est inclus dans la largeur totale
+            z-index: 10;
 
             p {
                 margin: 0;
@@ -45,29 +47,31 @@
             border-bottom-left-radius: 5px;
             border-bottom-right-radius: 5px;
             background-color: #F6F6F6;
-            overflow: hidden; // Ajoute overflow hidden pour gérer l'animation de déploiement
-            max-height: 0; // Définir la hauteur maximale à 0 par défaut
-            transition: max-height 0.3s ease, padding 0.3s ease; // Ajoute une transition pour l'animation
-            padding: 0 15px; // Padding global de 15px sur les côtés
-            visibility: hidden; // Rendre le contenu invisible par défaut
-            width: 100%; // Assure que la largeur du contenu reste constante
-            box-sizing: border-box; // Assure que le padding est inclus dans la largeur totale
-
+            overflow: hidden;
+            max-height: 0; // Commence à 0 pour ne prendre aucune place
+            transition: max-height 0.3s ease, padding 0.3s ease; // Transition pour max-height et padding
+            padding: 0 15px; // Padding initial ajusté
+            visibility: hidden; // Rendre le contenu invisible initialement
+            width: 100%;
+            box-sizing: border-box;
+        
             &.open {
-                max-height: 1000px; // Définir une hauteur maximale suffisante pour le contenu
-                padding-top: 10px; // Conserver le padding lorsque le contenu est ouvert
-                padding-bottom: 10px; // Conserver le padding lorsque le contenu est ouvert
-                visibility: visible; // Rendre le contenu visible lorsque ouvert
+                max-height: 1000px; // Augmente max-height pour permettre au contenu de s'expandre
+                padding-top: 10px;
+                padding-bottom: 10px;
+                visibility: visible;
+                transition-delay: 0s; // Assure que la transition commence immédiatement
             }
-
+        
             ul {
-                list-style: none; // Supprime les puces des éléments de la liste
-                padding: 0; // Supprime tout padding par défaut de la liste
-                margin: 0; // Supprime toute marge par défaut de la liste
+                list-style: none;
+                padding: 0;
+                margin: 0;
                 display: flex;
-                flex-direction: column; // Affiche les éléments de la liste en colonne
+                flex-direction: column;
             }
         }
+        
     }
 }
 
@@ -80,7 +84,6 @@
 @media (max-width: 765px) {
     .dropdowns {
         width: 100%;    
-        padding: 10px;   
 
         .dropdown {
             width: 100%;
