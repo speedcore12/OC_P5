@@ -28,10 +28,6 @@ const Header = () => {
         // Ajout de l'écouteur d'événements pour le redimensionnement de la fenêtre
         window.addEventListener('resize', handleResize);
 
-        // Nettoyage de l'écouteur d'événements lors du démontage du composant
-        return () => {
-            window.removeEventListener('resize', handleResize);
-        };
     }, []);
 
     return (

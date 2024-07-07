@@ -7,7 +7,11 @@ const Footer = () => {
     return (
         <footer>
             <img src={logo} alt="Logo Kasa" />
-            <p>© 2020 Kasa. All rights reserved</p>
+            <div>
+                <p>© 2020 Kasa.</p>
+                <p> All rights reserved</p>
+            </div>
+
         </footer>
     );
 };

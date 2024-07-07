@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './about.module.scss'; // Assurez-vous d'importer les styles correctement
+import styles from './about.module.scss';
 import Header from '../components/header';   
 import Footer from '../components/footer';
 import bgImage from './title_background.webp';
